@@ -1,106 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chillzone</title>
-<style>
-body {
-  font-family: Arial, sans-serif;
-  background: #f8f9fa;
-  margin: 0;
-  padding: 0;
-}
-header {
-  background: white;
-  padding: 20px;
-  border-bottom: 1px solid #ddd;
-}
-h1 {
-  margin: 0;
-}
-input {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  font-size: 16px;
-}
-section {
-  padding: 20px;
-}
-h2 {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 5px;
-}
-.card {
-  background: white;
-  padding: 10px;
-  margin: 8px 0;
-  border: 1px solid #ddd;
-}
-.card small {
-  color: #666;
-}
-a {
-  text-decoration: none;
-  color: #0066cc;
-}
-</style>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
-
 <body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="movies.html">Movies</a>
+  <a href="tv.html">TV</a>
+  <a href="anime.html">Anime</a>
+  <a href="manga.html">Manga</a>
+  <a href="music.html">Music</a>
+  <a href="proxies.html">Proxies</a>
+  <button onclick="toggleDark()">🌙</button>
+</nav>
 
 <header>
   <h1>Chillzone</h1>
-  <input type="text" id="search" placeholder="Search everything..." onkeyup="filterItems()">
+  <p>Everything in one place.</p>
 </header>
-
-<section id="movies">
-  <h2>Movies</h2>
-  <div class="card" data-name="Avengers Endgame">Avengers: Endgame<br><small>Link coming soon</small></div>
-  <div class="card" data-name="Spider Man No Way Home">Spider-Man: No Way Home<br><small>Link coming soon</small></div>
-</section>
-
-<section id="tv">
-  <h2>TV Shows</h2>
-  <div class="card" data-name="Breaking Bad">Breaking Bad<br><small>Link coming soon</small></div>
-</section>
-
-<section id="anime">
-  <h2>Anime</h2>
-  <div class="card" data-name="Naruto">Naruto<br><small>Link coming soon</small></div>
-</section>
-
-<section id="manga">
-  <h2>Manga</h2>
-  <div class="card" data-name="One Piece">One Piece<br><small>Link coming soon</small></div>
-</section>
-
-<section id="music">
-  <h2>Music</h2>
-  <div class="card" data-name="LoFi Beats">Lo-Fi Beats<br><small>Link coming soon</small></div>
-</section>
-
-<section id="proxies">
-  <h2>Proxies</h2>
-  <div class="card"><a href="https://example.com" target="_blank">Proxy 1</a></div>
-</section>
-
-<script>
-function filterItems() {
-  let input = document.getElementById("search").value.toLowerCase();
-  let cards = document.querySelectorAll(".card");
-  cards.forEach(card => {
-    let name = card.getAttribute("data-name");
-    if (!name || name.toLowerCase().includes(input)) {
-      card.style.display = "";
-    } else {
-      card.style.display = "none";
-    }
-  });
-}
-</script>
 
 </body>
 </html>
-
